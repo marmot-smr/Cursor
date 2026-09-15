@@ -11,7 +11,7 @@
 | `resume/Danila-Surkov-System-Analyst-RU.pdf` | Основной файл на отклик в РФ |
 | `resume/Danila-Surkov-System-Analyst-EN.pdf` | Для англоязычных команд и GetMatch EN |
 | `resume/danila-surkov-ru.html` / `danila-surkov-en.html` | Исходники вёрстки |
-| `resume/TEXTS.md` | Заголовок, «обо мне», сопроводительное, сообщение рекрутеру |
+| `resume/TEXTS.md` | **Сначала сюда:** описания мест работы для полей GetMatch, плюс заголовок и «обо мне» |
 | `scripts/render_resume.sh` | Пересборка PDF |
 
 ## Сборка PDF
