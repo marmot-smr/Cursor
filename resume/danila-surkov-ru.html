@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Данила Сурков — системный аналитик Middle+</title>
+  <style>
+    :root {
+      --ink: #14171e;
+      --muted: #556070;
+      --line: #d5dce4;
+      --accent: #123a44;
+      --band: #f2f5f6;
+      --chip: #e7eef0;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: Inter, "Noto Sans", "Liberation Sans", Arial, sans-serif;
+      font-size: 9.55pt;
+      line-height: 1.32;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    @page { size: A4; margin: 9.5mm 11.5mm 9mm 11.5mm; }
+    h1 {
+      margin: 0;
+      font-size: 22pt;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .role {
+      margin: 3px 0 0;
+      font-size: 10.8pt;
+      font-weight: 600;
+    }
+    .target { margin: 2px 0 0; color: var(--muted); font-size: 8.35pt; }
+    .header {
+      display: grid;
+      grid-template-columns: 1.4fr 0.85fr;
+      gap: 8px;
+      padding-bottom: 6px;
+      border-bottom: 2.2px solid var(--accent);
+    }
+    .contacts { text-align: right; font-size: 8.35pt; line-height: 1.42; }
+    .contacts a { color: var(--ink); text-decoration: none; }
+    .kicker {
+      color: var(--muted);
+      font-size: 8pt;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 6px;
+      margin: 8px 0 7px;
+    }
+    .metric {
+      background: var(--band);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 7px 8px 6px;
+      min-height: 52px;
+    }
+    .metric b { display: block; font-size: 8.9pt; color: var(--accent); }
+    .metric span { display: block; color: var(--muted); font-size: 7.7pt; line-height: 1.22; margin-top: 1px; }
+    h2 {
+      margin: 8px 0 4px;
+      font-size: 7.7pt;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1px;
+      font-weight: 700;
+    }
+    p { margin: 0; }
+    .skill-row {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 5px;
+      margin: 1.5px 0;
+    }
+    .skill-row dt { margin: 0; font-weight: 650; color: var(--accent); font-size: 8.2pt; padding-top: 1px; }
+    .skill-row dd { margin: 0; }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      border: 1px solid #d4dfe2;
+      border-radius: 3px;
+      padding: 0 5px;
+      margin: 0 2px 2px 0;
+      font-size: 7.85pt;
+      line-height: 1.48;
+      white-space: nowrap;
+    }
+    .job { margin: 5px 0 1px; }
+    .job-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+    .job-title { font-weight: 700; font-size: 9.7pt; }
+    .job-title span { font-weight: 500; color: var(--muted); }
+    .when { white-space: nowrap; font-size: 8.1pt; color: var(--muted); font-weight: 600; }
+    .stack { color: var(--muted); font-size: 7.85pt; margin: 0 0 2px; }
+    ul { margin: 0; padding-left: 13px; }
+    li { margin: 0 0 1.5px; }
+    li::marker { color: var(--accent); }
+    .edu { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; margin-top: 3px; }
+    .promo {
+      display: inline-block;
+      background: #123a44;
+      color: #fff;
+      font-size: 7.1pt;
+      font-weight: 700;
+      padding: 0 5px;
+      border-radius: 3px;
+      margin-left: 4px;
+      vertical-align: 1px;
+    }
+    .intern p { margin: 1.5px 0; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div>
+      <div class="kicker">Москва · Remote / гибрид · готов выйти</div>
+      <h1>Данила Сурков</h1>
+      <div class="role">Системный аналитик Middle+ · интеграции и API</div>
+      <p class="target">Целевые роли: System / Integration Analyst · WMS, логистика, fintech, enterprise</p>
+    </div>
+    <div class="contacts">
+      <a href="mailto:danila-surkov@mail.ru">danila-surkov@mail.ru</a><br />
+      <a href="tel:+79270131570">+7 927 013 15 70</a><br />
+      Telegram: @surkov_danila<br />
+      Английский C1/C2 · русский — родной
+    </div>
+  </header>
+
+  <section class="metrics">
+    <div class="metric">
+      <b>−50% трудозатрат на процесс</b>
+      <span>Интеграция от требований до запуска по всей торговой сети</span>
+    </div>
+    <div class="metric">
+      <b>Быстрее в production</b>
+      <span>Стандартизировал REST/OpenAPI и согласование контрактов</span>
+    </div>
+    <div class="metric">
+      <b>Меньше инцидентов после релиза</b>
+      <span>Точные сценарии взаимодействия сервисов и требования</span>
+    </div>
+  </section>
+
+  <h2>Профиль</h2>
+  <p>Системный аналитик в интеграционных и enterprise-контурах: формализую сложные требования, проектирую REST/OpenAPI и асинхронный обмен на Kafka/RabbitMQ, веду участок до production. Работаю на стыке бизнеса и разработки, участвую в архитектуре, разбираю инциденты по логам и SQL. Сильная сторона — интеграции с WMS и государственными ИС.</p>
+
+  <h2>Навыки</h2>
+  <dl>
+    <div class="skill-row">
+      <dt>API и интеграции</dt>
+      <dd>
+        <span class="chip">REST</span><span class="chip">OpenAPI / Swagger</span><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">event-driven</span><span class="chip">JSON</span><span class="chip">микросервисы</span>
+      </dd>
+    </div>
+    <div class="skill-row">
+      <dt>Данные и SQL</dt>
+      <dd>
+        <span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">аналитические отчёты</span><span class="chip">разбор логов</span>
+      </dd>
+    </div>
+    <div class="skill-row">
+      <dt>Анализ и модели</dt>
+      <dd>
+        <span class="chip">UML</span><span class="chip">BPMN</span><span class="chip">use cases</span><span class="chip">сценарии взаимодействия</span><span class="chip">постановка задач</span>
+      </dd>
+    </div>
+    <div class="skill-row">
+      <dt>Процесс и код</dt>
+      <dd>
+        <span class="chip">Agile / Kanban</span><span class="chip">Confluence</span><span class="chip">Git</span><span class="chip">CI/CD</span><span class="chip">Python</span><span class="chip">C++</span>
+      </dd>
+    </div>
+    <div class="skill-row">
+      <dt>Предметные области</dt>
+      <dd>
+        <span class="chip">WMS</span><span class="chip">государственные ИС</span><span class="chip">торговые сети</span><span class="chip">платёжные решения</span><span class="chip">информационная безопасность</span>
+      </dd>
+    </div>
+  </dl>
+
+  <h2>Опыт</h2>
+
+  <article class="job">
+    <div class="job-head">
+      <div class="job-title">Ви6 Сервисес <span>· System Analyst (Middle+)</span></div>
+      <div class="when">09.2024 — н.в. · 2 года</div>
+    </div>
+    <p class="stack">Интеграции enterprise / торговая сеть · REST, OpenAPI, Kafka, RabbitMQ, SQL, PostgreSQL, Confluence</p>
+    <ul>
+      <li>Провёл интеграцию полного цикла (требования → запуск): трудозатраты на процесс сократились <b>в 2 раза по всей торговой сети</b>.</li>
+      <li>Спроектировал REST API и контракты сервисов в OpenAPI/Swagger; стандартизация ускорила вывод изменений в production.</li>
+      <li>Проработал event-driven интеграции на Kafka и RabbitMQ: асинхронные сценарии, границы сервисов, сопровождение контрактов.</li>
+      <li>Снизил число инцидентов и пост-релизных доработок за счёт точных требований и сценариев взаимодействия.</li>
+      <li>Интеграции с WMS и государственными ИС: обмен, статусы, расхождения, сопровождение в эксплуатации.</li>
+      <li>Декомпозировал требования, ставил задачи backend/frontend, вёл grooming/planning, участвовал в архитектурных решениях.</li>
+      <li>SQL-отчёты, разбор логов и production-инцидентов, Confluence, коммуникация с заказчиком.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job-head">
+      <div class="job-title">Best2Pay (Бест2пей) <span>· System / Business Analyst</span><span class="promo">рост intern → analyst</span></div>
+      <div class="when">04.2024 — 11.2024 · 7 мес.</div>
+    </div>
+    <p class="stack">Платёжные / клиентские решения на legacy · intern 04–07.2024, с 07.2024 — System / Business Analyst</p>
+    <ul>
+      <li>Вырос с intern до аналитика за 3 месяца: от поддержки команды до самостоятельной работы с клиентскими контурами.</li>
+      <li>Разобрал логику и пользовательские сценарии устаревшего ПО, актуализировал решения и предложил развитие функциональности.</li>
+      <li>Собрал требования, согласовал ТЗ для дизайнеров и разработчиков, контролировал прохождение процессов, вёл Wiki.</li>
+    </ul>
+  </article>
+
+  <article class="job intern">
+    <div class="job-title">Стажировки</div>
+    <p><b>ИАТЭ НИЯУ МИФИ</b> · аналитик-практикант · 01.2024 — 04.2024. Анализ процессов и данных, системное моделирование, схемы и аналитические материалы.</p>
+    <p><b>Инфотекс (InfoTeCS)</b> · аналитик ИБ · 05.2022 — 08.2022. Процессы в контуре ИБ, поиск потенциальных уязвимостей, описание новых процессов.</p>
+  </article>
+
+  <h2>Образование</h2>
+  <div class="edu">
+    <div><b>НИЯУ МИФИ</b>, Москва — информационная безопасность, <b>магистр</b></div>
+    <div class="when">2020 — 2025</div>
+    <div><b>НИУ ВШЭ</b> — бизнес-информатика, <b>магистр</b></div>
+    <div class="when">2018 — 2023</div>
+  </div>
+</body>
+</html>

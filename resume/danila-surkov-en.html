@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Danila Surkov — System Analyst Middle+</title>
+  <style>
+    :root {
+      --ink: #14171e;
+      --muted: #556070;
+      --line: #d5dce4;
+      --accent: #123a44;
+      --band: #f2f5f6;
+      --chip: #e7eef0;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: Inter, "Noto Sans", "Liberation Sans", Arial, sans-serif;
+      font-size: 9.55pt;
+      line-height: 1.32;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    @page { size: A4; margin: 9.5mm 11.5mm 9mm 11.5mm; }
+    h1 {
+      margin: 0;
+      font-size: 22pt;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .role { margin: 3px 0 0; font-size: 10.8pt; font-weight: 600; }
+    .target { margin: 2px 0 0; color: var(--muted); font-size: 8.35pt; }
+    .header {
+      display: grid;
+      grid-template-columns: 1.4fr 0.85fr;
+      gap: 8px;
+      padding-bottom: 6px;
+      border-bottom: 2.2px solid var(--accent);
+    }
+    .contacts { text-align: right; font-size: 8.35pt; line-height: 1.42; }
+    .contacts a { color: var(--ink); text-decoration: none; }
+    .kicker {
+      color: var(--muted);
+      font-size: 8pt;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 6px;
+      margin: 8px 0 7px;
+    }
+    .metric {
+      background: var(--band);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 7px 8px 6px;
+      min-height: 52px;
+    }
+    .metric b { display: block; font-size: 8.9pt; color: var(--accent); }
+    .metric span { display: block; color: var(--muted); font-size: 7.7pt; line-height: 1.22; margin-top: 1px; }
+    h2 {
+      margin: 8px 0 4px;
+      font-size: 7.7pt;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1px;
+      font-weight: 700;
+    }
+    p { margin: 0; }
+    .skill-row {
+      display: grid;
+      grid-template-columns: 118px 1fr;
+      gap: 5px;
+      margin: 1.5px 0;
+    }
+    .skill-row dt { margin: 0; font-weight: 650; color: var(--accent); font-size: 8.2pt; padding-top: 1px; }
+    .skill-row dd { margin: 0; }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      border: 1px solid #d4dfe2;
+      border-radius: 3px;
+      padding: 0 5px;
+      margin: 0 2px 2px 0;
+      font-size: 7.85pt;
+      line-height: 1.48;
+      white-space: nowrap;
+    }
+    .job { margin: 5px 0 1px; }
+    .job-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+    .job-title { font-weight: 700; font-size: 9.7pt; }
+    .job-title span { font-weight: 500; color: var(--muted); }
+    .when { white-space: nowrap; font-size: 8.1pt; color: var(--muted); font-weight: 600; }
+    .stack { color: var(--muted); font-size: 7.85pt; margin: 0 0 2px; }
+    ul { margin: 0; padding-left: 13px; }
+    li { margin: 0 0 1.5px; }
+    li::marker { color: var(--accent); }
+    .edu { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; margin-top: 3px; }
+    .promo {
+      display: inline-block;
+      background: #123a44;
+      color: #fff;
+      font-size: 7.1pt;
+      font-weight: 700;
+      padding: 0 5px;
+      border-radius: 3px;
+      margin-left: 4px;
+      vertical-align: 1px;
+    }
+    .intern p { margin: 1.5px 0; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div>
+      <div class="kicker">Moscow · Remote / hybrid · available now</div>
+      <h1>Danila Surkov</h1>
+      <div class="role">System Analyst Middle+ · integrations &amp; APIs</div>
+      <p class="target">Target roles: System / Integration Analyst · WMS, logistics, fintech, enterprise</p>
+    </div>
+    <div class="contacts">
+      <a href="mailto:danila-surkov@mail.ru">danila-surkov@mail.ru</a><br />
+      <a href="tel:+79270131570">+7 927 013 15 70</a><br />
+      Telegram: @surkov_danila<br />
+      English C1/C2 · Russian native
+    </div>
+  </header>
+
+  <section class="metrics">
+    <div class="metric">
+      <b>−50% labour on a process</b>
+      <span>End-to-end integration rolled out across the retail network</span>
+    </div>
+    <div class="metric">
+      <b>Faster to production</b>
+      <span>Standardized REST/OpenAPI contracts and alignment</span>
+    </div>
+    <div class="metric">
+      <b>Fewer post-release issues</b>
+      <span>Precise requirements and service interaction scenarios</span>
+    </div>
+  </section>
+
+  <h2>Profile</h2>
+  <p>System analyst in integration and enterprise programs: I turn complex requirements into REST/OpenAPI contracts and Kafka/RabbitMQ async flows, then own the slice through production. I work at the business–engineering boundary, join architecture decisions, and debug incidents with logs and SQL. Strongest in integrations with WMS and government information systems.</p>
+
+  <h2>Skills</h2>
+  <dl>
+    <div class="skill-row">
+      <dt>APIs &amp; integrations</dt>
+      <dd>
+        <span class="chip">REST</span><span class="chip">OpenAPI / Swagger</span><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">event-driven</span><span class="chip">JSON</span><span class="chip">microservices</span>
+      </dd>
+    </div>
+    <div class="skill-row">
+      <dt>Data &amp; SQL</dt>
+      <dd>
+        <span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">operational reports</span><span class="chip">log analysis</span>
+      </dd>
+    </div>
+    <div class="skill-row">
+      <dt>Analysis</dt>
+      <dd>
+        <span class="chip">UML</span><span class="chip">BPMN</span><span class="chip">use cases</span><span class="chip">interaction scenarios</span><span class="chip">dev tasking</span>
+      </dd>
+    </div>
+    <div class="skill-row">
+      <dt>Delivery</dt>
+      <dd>
+        <span class="chip">Agile / Kanban</span><span class="chip">Confluence</span><span class="chip">Git</span><span class="chip">CI/CD</span><span class="chip">Python</span><span class="chip">C++</span>
+      </dd>
+    </div>
+    <div class="skill-row">
+      <dt>Domains</dt>
+      <dd>
+        <span class="chip">WMS</span><span class="chip">government IS</span><span class="chip">retail networks</span><span class="chip">payments</span><span class="chip">information security</span>
+      </dd>
+    </div>
+  </dl>
+
+  <h2>Experience</h2>
+
+  <article class="job">
+    <div class="job-head">
+      <div class="job-title">V6 Services (Ви6 Сервисес) <span>· System Analyst (Middle+)</span></div>
+      <div class="when">Sep 2024 — present · 2 yrs</div>
+    </div>
+    <p class="stack">Enterprise integrations / retail · REST, OpenAPI, Kafka, RabbitMQ, SQL, PostgreSQL, Confluence</p>
+    <ul>
+      <li>Delivered a full-cycle integration (requirements → launch) that <b>cut process labour in half across the retail network</b>.</li>
+      <li>Designed REST APIs and service contracts in OpenAPI/Swagger; API standards sped up production releases.</li>
+      <li>Designed Kafka and RabbitMQ event-driven integrations: async flows, service boundaries, contract ownership.</li>
+      <li>Reduced incidents and post-release rework through precise requirements and interaction scenarios.</li>
+      <li>Integrated with WMS and government IS: exchanges, statuses, discrepancies, operational support.</li>
+      <li>Broke down requirements, tasked backend/frontend, ran grooming/planning, joined architecture decisions.</li>
+      <li>SQL reports, log/production incident analysis, Confluence docs, stakeholder communication.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job-head">
+      <div class="job-title">Best2Pay <span>· System / Business Analyst</span><span class="promo">intern → analyst</span></div>
+      <div class="when">Apr 2024 — Nov 2024 · 7 mo</div>
+    </div>
+    <p class="stack">Payment / client solutions on legacy · intern Apr–Jul 2024, System / Business Analyst from Jul 2024</p>
+    <ul>
+      <li>Promoted intern → analyst in 3 months: from supporting the team to owning client-solution work.</li>
+      <li>Reverse-engineered legacy behaviour and user journeys; proposed functional improvements.</li>
+      <li>Elicited requirements, aligned specs for design and engineering, tracked process delivery, built an internal wiki.</li>
+    </ul>
+  </article>
+
+  <article class="job intern">
+    <div class="job-title">Internships</div>
+    <p><b>IATE MEPhI</b> · analyst intern · Jan 2024 — Apr 2024. Process and data analysis, system modelling, diagrams and analytical notes.</p>
+    <p><b>InfoTeCS</b> · information-security analyst intern · May 2022 — Aug 2022. Security-contour processes, potential vulnerability analysis, new process descriptions.</p>
+  </article>
+
+  <h2>Education</h2>
+  <div class="edu">
+    <div><b>MEPhI</b>, Moscow — Information Security, <b>Master’s</b></div>
+    <div class="when">2020 — 2025</div>
+    <div><b>HSE University</b> — Business Informatics, <b>Master’s</b></div>
+    <div class="when">2018 — 2023</div>
+  </div>
+</body>
+</html>
