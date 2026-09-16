@@ -4,13 +4,38 @@
   <meta charset="utf-8" />
   <title>Данила Сурков — системный аналитик Middle+</title>
   <style>
+    @font-face {
+      font-family: "Noto Serif Display";
+      src: url("file:///usr/share/fonts/truetype/noto/NotoSerifDisplay-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: Inter;
+      src: url("file:///usr/share/fonts/truetype/macos/Inter-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: Inter;
+      src: url("file:///usr/share/fonts/truetype/macos/Inter-Medium.ttf") format("truetype");
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: Inter;
+      src: url("file:///usr/share/fonts/truetype/macos/Inter-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+    }
+    @font-face {
+      font-family: Inter;
+      src: url("file:///usr/share/fonts/truetype/macos/Inter-Bold.ttf") format("truetype");
+      font-weight: 700;
+    }
     :root {
-      --ink: #14171e;
-      --muted: #556070;
-      --line: #d5dce4;
-      --accent: #123a44;
-      --band: #f2f5f6;
-      --chip: #e7eef0;
+      --ink: #16181d;
+      --muted: #5c6570;
+      --rule: #1b1d22;
+      --hair: #c5c9cf;
+      --accent: #1f3d48;
     }
     * { box-sizing: border-box; }
     html, body {
@@ -19,176 +44,208 @@
       background: #fff;
       color: var(--ink);
       font-family: Inter, "Noto Sans", "Liberation Sans", Arial, sans-serif;
-      font-size: 9.55pt;
-      line-height: 1.32;
+      font-size: 9.3pt;
+      line-height: 1.3;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
-    @page { size: A4; margin: 9.5mm 11.5mm 9mm 11.5mm; }
+    @page { size: A4; margin: 10.5mm 12.5mm 10mm 12.5mm; }
+    header { margin: 0 0 2px; }
+    .mast {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: end;
+    }
     h1 {
       margin: 0;
-      font-size: 22pt;
-      line-height: 1.02;
-      letter-spacing: -0.03em;
+      font-family: "Noto Serif Display", "Noto Serif", "Liberation Serif", Georgia, serif;
+      font-size: 25pt;
+      line-height: 0.95;
       font-weight: 700;
-      color: var(--accent);
+      letter-spacing: -0.025em;
+      color: var(--ink);
     }
     .role {
-      margin: 3px 0 0;
-      font-size: 10.8pt;
-      font-weight: 600;
+      margin: 6px 0 0;
+      font-size: 10.2pt;
+      font-weight: 500;
+      letter-spacing: 0.01em;
     }
-    .target { margin: 2px 0 0; color: var(--muted); font-size: 8.35pt; }
-    .header {
-      display: grid;
-      grid-template-columns: 1.4fr 0.85fr;
-      gap: 8px;
-      padding-bottom: 6px;
-      border-bottom: 2.2px solid var(--accent);
+    .contacts {
+      text-align: right;
+      font-size: 8.3pt;
+      line-height: 1.48;
+      color: var(--ink);
     }
-    .contacts { text-align: right; font-size: 8.35pt; line-height: 1.42; }
-    .contacts a { color: var(--ink); text-decoration: none; }
-    .kicker {
-      color: var(--muted);
-      font-size: 8pt;
-      letter-spacing: 0.045em;
+    .contacts a { color: inherit; text-decoration: none; }
+    .rules {
+      margin: 7px 0 7px;
+      border-top: 2.05px solid var(--rule);
+      border-bottom: 0.45px solid var(--rule);
+      height: 4px;
+    }
+    .meta {
+      margin: 0 0 8px;
+      font-size: 8.15pt;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      font-weight: 600;
+      color: var(--muted);
+      font-weight: 500;
     }
-    .metrics {
+    .results {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 6px;
-      margin: 8px 0 7px;
+      gap: 0;
+      margin: 0 0 4px;
+      border-top: 0.45px solid var(--hair);
+      border-bottom: 0.45px solid var(--hair);
     }
-    .metric {
-      background: var(--band);
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      padding: 7px 8px 6px;
-      min-height: 52px;
+    .result {
+      padding: 6px 12px 6px 0;
     }
-    .metric b { display: block; font-size: 8.9pt; color: var(--accent); }
-    .metric span { display: block; color: var(--muted); font-size: 7.7pt; line-height: 1.22; margin-top: 1px; }
-    h2 {
-      margin: 8px 0 4px;
-      font-size: 7.7pt;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
+    .result + .result {
+      padding-left: 12px;
+      border-left: 0.45px solid var(--hair);
+    }
+    .result b {
+      display: block;
+      font-size: 9pt;
+      font-weight: 650;
       color: var(--accent);
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 1px;
-      font-weight: 700;
+    }
+    .result span {
+      display: block;
+      margin-top: 2px;
+      font-size: 7.85pt;
+      line-height: 1.28;
+      color: var(--muted);
+    }
+    h2 {
+      margin: 8px 0 3px;
+      font-size: 7.55pt;
+      font-weight: 650;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border-bottom: 0.45px solid var(--hair);
+      padding-bottom: 2px;
     }
     p { margin: 0; }
+    .profile { text-align: justify; hyphens: auto; }
+    .skills { margin: 0; }
     .skill-row {
       display: grid;
-      grid-template-columns: 132px 1fr;
-      gap: 5px;
-      margin: 1.5px 0;
+      grid-template-columns: 128px 1fr;
+      gap: 8px;
+      margin: 2.5px 0;
     }
-    .skill-row dt { margin: 0; font-weight: 650; color: var(--accent); font-size: 8.2pt; padding-top: 1px; }
-    .skill-row dd { margin: 0; }
-    .chip {
-      display: inline-block;
-      background: var(--chip);
-      border: 1px solid #d4dfe2;
-      border-radius: 3px;
-      padding: 0 5px;
-      margin: 0 2px 2px 0;
-      font-size: 7.85pt;
-      line-height: 1.48;
-      white-space: nowrap;
+    .skill-row dt {
+      margin: 0;
+      font-weight: 650;
+      font-size: 8.3pt;
+      color: var(--accent);
     }
-    .job { margin: 5px 0 1px; }
-    .job-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
-    .job-title { font-weight: 700; font-size: 9.7pt; }
+    .skill-row dd {
+      margin: 0;
+      color: var(--ink);
+    }
+    .job { margin: 6px 0 0; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+    .job-title { font-weight: 650; font-size: 10pt; }
     .job-title span { font-weight: 500; color: var(--muted); }
-    .when { white-space: nowrap; font-size: 8.1pt; color: var(--muted); font-weight: 600; }
-    .stack { color: var(--muted); font-size: 7.85pt; margin: 0 0 2px; }
-    ul { margin: 0; padding-left: 13px; }
-    li { margin: 0 0 1.5px; }
-    li::marker { color: var(--accent); }
-    .edu { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; margin-top: 3px; }
-    .promo {
-      display: inline-block;
-      background: #123a44;
-      color: #fff;
-      font-size: 7.1pt;
-      font-weight: 700;
-      padding: 0 5px;
-      border-radius: 3px;
-      margin-left: 4px;
-      vertical-align: 1px;
+    .when {
+      white-space: nowrap;
+      font-size: 8.2pt;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      font-weight: 500;
     }
-    .intern p { margin: 1.5px 0; }
+    .stack {
+      margin: 1px 0 3px;
+      color: var(--muted);
+      font-size: 8pt;
+    }
+    ul {
+      margin: 0;
+      padding-left: 14px;
+    }
+    li { margin: 0 0 1.4px; padding-left: 1px; }
+    li::marker { color: var(--accent); }
+    .intern { margin-top: 6px; }
+    .intern .job-title { font-size: 9.6pt; margin-bottom: 2px; }
+    .intern p { margin: 2px 0; }
+    .edu {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2px 16px;
+      margin-top: 2px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div>
-      <div class="kicker">Москва · Remote / гибрид · готов выйти</div>
-      <h1>Данила Сурков</h1>
-      <div class="role">Системный аналитик Middle+ · интеграции и API</div>
-      <p class="target">Целевые роли: System / Integration Analyst · WMS, логистика, fintech, enterprise</p>
+  <header>
+    <div class="mast">
+      <div>
+        <h1>Данила Сурков</h1>
+        <p class="role">Системный аналитик Middle+ · интеграции и API</p>
+      </div>
+      <div class="contacts">
+        <a href="mailto:danila-surkov@mail.ru">danila-surkov@mail.ru</a><br />
+        <a href="tel:+79270131570">+7 927 013 15 70</a><br />
+        Telegram: @surkov_danila
+      </div>
     </div>
-    <div class="contacts">
-      <a href="mailto:danila-surkov@mail.ru">danila-surkov@mail.ru</a><br />
-      <a href="tel:+79270131570">+7 927 013 15 70</a><br />
-      Telegram: @surkov_danila<br />
-      Английский C1/C2 · русский — родной
-    </div>
+    <div class="rules"></div>
+    <p class="meta">Москва · Remote / гибрид · английский C1/C2 · русский — родной</p>
   </header>
 
-  <section class="metrics">
-    <div class="metric">
+  <section class="results">
+    <div class="result">
       <b>−50% трудозатрат на процесс</b>
       <span>Интеграция от требований до запуска по всей торговой сети</span>
     </div>
-    <div class="metric">
-      <b>Быстрее в production</b>
-      <span>Стандартизировал REST/OpenAPI и согласование контрактов</span>
+    <div class="result">
+      <b>Быстрее вывод в production</b>
+      <span>Стандартизация REST/OpenAPI и согласование контрактов</span>
     </div>
-    <div class="metric">
-      <b>Меньше инцидентов после релиза</b>
-      <span>Точные сценарии взаимодействия сервисов и требования</span>
+    <div class="result">
+      <b>Меньше инцидентов</b>
+      <span>Точные требования и сценарии взаимодействия после релиза</span>
     </div>
   </section>
 
   <h2>Профиль</h2>
-  <p>Системный аналитик в интеграционных и enterprise-контурах: формализую сложные требования, проектирую REST/OpenAPI и асинхронный обмен на Kafka/RabbitMQ, веду участок до production. Работаю на стыке бизнеса и разработки, участвую в архитектуре, разбираю инциденты по логам и SQL. Сильная сторона — интеграции с WMS и государственными ИС.</p>
+  <p class="profile">Системный аналитик в интеграционных и enterprise-контурах: формализую сложные требования, проектирую REST/OpenAPI и асинхронный обмен на Kafka/RabbitMQ, веду участок до production. Работаю на стыке бизнеса и разработки, участвую в архитектуре, разбираю инциденты по логам и SQL. Сильная сторона — интеграции с WMS и государственными ИС.</p>
 
   <h2>Навыки</h2>
-  <dl>
+  <dl class="skills">
     <div class="skill-row">
       <dt>API и интеграции</dt>
-      <dd>
-        <span class="chip">REST</span><span class="chip">OpenAPI / Swagger</span><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">event-driven</span><span class="chip">JSON</span><span class="chip">микросервисы</span>
-      </dd>
+      <dd>REST, OpenAPI / Swagger, Kafka, RabbitMQ, event-driven, JSON, микросервисы</dd>
     </div>
     <div class="skill-row">
       <dt>Данные и SQL</dt>
-      <dd>
-        <span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">аналитические отчёты</span><span class="chip">разбор логов</span>
-      </dd>
+      <dd>SQL, PostgreSQL, аналитические отчёты, разбор логов</dd>
     </div>
     <div class="skill-row">
       <dt>Анализ и модели</dt>
-      <dd>
-        <span class="chip">UML</span><span class="chip">BPMN</span><span class="chip">use cases</span><span class="chip">сценарии взаимодействия</span><span class="chip">постановка задач</span>
-      </dd>
+      <dd>UML, BPMN, use cases, сценарии взаимодействия, постановка задач</dd>
     </div>
     <div class="skill-row">
       <dt>Процесс и код</dt>
-      <dd>
-        <span class="chip">Agile / Kanban</span><span class="chip">Confluence</span><span class="chip">Git</span><span class="chip">CI/CD</span><span class="chip">Python</span><span class="chip">C++</span>
-      </dd>
+      <dd>Agile / Kanban, Confluence, Git, CI/CD, Python, C++</dd>
     </div>
     <div class="skill-row">
       <dt>Предметные области</dt>
-      <dd>
-        <span class="chip">WMS</span><span class="chip">государственные ИС</span><span class="chip">торговые сети</span><span class="chip">платёжные решения</span><span class="chip">информационная безопасность</span>
-      </dd>
+      <dd>WMS, государственные ИС, торговые сети, платёжные решения, информационная безопасность</dd>
     </div>
   </dl>
 
@@ -197,7 +254,7 @@
   <article class="job">
     <div class="job-head">
       <div class="job-title">Ви6 Сервисес <span>· System Analyst (Middle+)</span></div>
-      <div class="when">09.2024 — н.в. · 2 года</div>
+      <div class="when">09.2024 — н.в.</div>
     </div>
     <p class="stack">Интеграции enterprise / торговая сеть · REST, OpenAPI, Kafka, RabbitMQ, SQL, PostgreSQL, Confluence</p>
     <ul>
@@ -207,14 +264,14 @@
       <li>Снизил число инцидентов и пост-релизных доработок за счёт точных требований и сценариев взаимодействия.</li>
       <li>Интеграции с WMS и государственными ИС: обмен, статусы, расхождения, сопровождение в эксплуатации.</li>
       <li>Декомпозировал требования, ставил задачи backend/frontend, вёл grooming/planning, участвовал в архитектурных решениях.</li>
-      <li>SQL-отчёты, разбор логов и production-инцидентов, Confluence, коммуникация с заказчиком.</li>
+      <li>SQL-отчёты, разбор логов и production-инцидентов, документация в Confluence, коммуникация с заказчиком.</li>
     </ul>
   </article>
 
   <article class="job">
     <div class="job-head">
-      <div class="job-title">Best2Pay (Бест2пей) <span>· System / Business Analyst</span><span class="promo">рост intern → analyst</span></div>
-      <div class="when">04.2024 — 11.2024 · 7 мес.</div>
+      <div class="job-title">Best2Pay (Бест2пей) <span>· System / Business Analyst</span></div>
+      <div class="when">04.2024 — 11.2024</div>
     </div>
     <p class="stack">Платёжные / клиентские решения на legacy · intern 04–07.2024, с 07.2024 — System / Business Analyst</p>
     <ul>
@@ -227,15 +284,15 @@
   <article class="job intern">
     <div class="job-title">Стажировки</div>
     <p><b>ИАТЭ НИЯУ МИФИ</b> · аналитик-практикант · 01.2024 — 04.2024. Анализ процессов и данных, системное моделирование, схемы и аналитические материалы.</p>
-    <p><b>Инфотекс (InfoTeCS)</b> · аналитик ИБ · 05.2022 — 08.2022. Процессы в контуре ИБ, поиск потенциальных уязвимостей, описание новых процессов.</p>
+    <p><b>Инфотекс (InfoTeCS)</b> · аналитик ИБ · 05.2022 — 08.2022. Процессы в контуре информационной безопасности, поиск потенциальных уязвимостей, описание новых процессов.</p>
   </article>
 
   <h2>Образование</h2>
   <div class="edu">
-    <div><b>НИЯУ МИФИ</b>, Москва — информационная безопасность, <b>магистр</b></div>
+    <div><b>НИЯУ МИФИ</b>, Москва — информационная безопасность, магистр</div>
     <div class="when">2020 — 2025</div>
-    <div><b>НИУ ВШЭ</b> — бизнес-информатика, <b>магистр</b></div>
-    <div class="when">2018 — 2023</div>
+    <div><b>НИУ ВШЭ</b> — бизнес-информатика, магистр</div>
+    <div class="when">2019 — 2023</div>
   </div>
 </body>
 </html>

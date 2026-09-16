@@ -19,6 +19,7 @@ render_pdf() {
     --no-first-run \
     --no-default-browser-check \
     --no-pdf-header-footer \
+    --allow-file-access-from-files \
     --virtual-time-budget=5000 \
     --print-to-pdf="$pdf" \
     "file://$html"
@@ -38,6 +39,7 @@ render_png() {
     --user-data-dir="$tmpdir" \
     --no-first-run \
     --hide-scrollbars \
+    --allow-file-access-from-files \
     --force-device-scale-factor=2 \
     --window-size=794,1123 \
     --screenshot="$png" \
@@ -53,10 +55,9 @@ render_png "$OUT/danila-surkov-en.html" "$OUT/preview-en.png"
 python3 - <<'PY'
 from pathlib import Path
 root = Path("/workspace/resume")
-for p in sorted(root.glob("Danila-Surkov*.pdf")) + sorted(root.glob("preview-*.png")):
-    data = p.read_bytes() if p.suffix == ".pdf" else b""
-    extra = ""
-    if p.suffix == ".pdf":
-        extra = f"  Count={data[data.find(b'/Count'):data.find(b'/Count')+20]!r}"
-    print(f"{p.name:44} {p.stat().st_size:8d} bytes{extra}")
+for p in sorted(root.glob("Danila-Surkov*.pdf")):
+    data = p.read_bytes()
+    i = data.find(b"/Count")
+    count = data[i:i+18] if i >= 0 else b"?"
+    print(p.name, p.stat().st_size, "bytes", count)
 PY
