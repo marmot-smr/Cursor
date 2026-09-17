@@ -8,7 +8,6 @@
       font-family: "Noto Serif Display";
       src: url("file:///usr/share/fonts/truetype/noto/NotoSerifDisplay-Bold.ttf") format("truetype");
       font-weight: 700;
-      font-style: normal;
     }
     @font-face {
       font-family: Inter;
@@ -44,13 +43,12 @@
       background: #fff;
       color: var(--ink);
       font-family: Inter, "Noto Sans", "Liberation Sans", Arial, sans-serif;
-      font-size: 9.3pt;
-      line-height: 1.3;
+      font-size: 9.05pt;
+      line-height: 1.27;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
-    @page { size: A4; margin: 10.5mm 12.5mm 10mm 12.5mm; }
-    header { margin: 0 0 2px; }
+    @page { size: A4; margin: 10mm 12mm 9.5mm 12mm; }
     .mast {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -59,127 +57,87 @@
     }
     h1 {
       margin: 0;
-      font-family: "Noto Serif Display", "Noto Serif", "Liberation Serif", Georgia, serif;
-      font-size: 25pt;
+      font-family: "Noto Serif Display", "Noto Serif", Georgia, serif;
+      font-size: 24pt;
       line-height: 0.95;
       font-weight: 700;
       letter-spacing: -0.025em;
-      color: var(--ink);
     }
     .role {
-      margin: 6px 0 0;
-      font-size: 10.2pt;
+      margin: 5px 0 0;
+      font-size: 10pt;
       font-weight: 500;
-      letter-spacing: 0.01em;
     }
     .contacts {
       text-align: right;
-      font-size: 8.3pt;
-      line-height: 1.48;
-      color: var(--ink);
+      font-size: 8.15pt;
+      line-height: 1.45;
     }
     .contacts a { color: inherit; text-decoration: none; }
     .rules {
-      margin: 7px 0 7px;
+      margin: 6px 0 6px;
       border-top: 2.05px solid var(--rule);
       border-bottom: 0.45px solid var(--rule);
       height: 4px;
     }
     .meta {
-      margin: 0 0 8px;
-      font-size: 8.15pt;
+      margin: 0 0 7px;
+      font-size: 7.9pt;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
       font-weight: 500;
     }
-    .results {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0;
-      margin: 0 0 4px;
-      border-top: 0.45px solid var(--hair);
-      border-bottom: 0.45px solid var(--hair);
-    }
-    .result {
-      padding: 6px 12px 6px 0;
-    }
-    .result + .result {
-      padding-left: 12px;
-      border-left: 0.45px solid var(--hair);
-    }
-    .result b {
-      display: block;
-      font-size: 9pt;
-      font-weight: 650;
-      color: var(--accent);
-    }
-    .result span {
-      display: block;
-      margin-top: 2px;
-      font-size: 7.85pt;
-      line-height: 1.28;
-      color: var(--muted);
-    }
     h2 {
-      margin: 8px 0 3px;
-      font-size: 7.55pt;
+      margin: 5.5px 0 2.5px;
+      font-size: 7.4pt;
       font-weight: 650;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--ink);
       border-bottom: 0.45px solid var(--hair);
       padding-bottom: 2px;
     }
     p { margin: 0; }
-    .profile { text-align: justify; hyphens: auto; }
-    .skills { margin: 0; }
-    .skill-row {
+    .can-row {
       display: grid;
-      grid-template-columns: 128px 1fr;
-      gap: 8px;
-      margin: 2.5px 0;
+      grid-template-columns: 122px 1fr;
+      gap: 7px;
+      margin: 1.6px 0;
     }
-    .skill-row dt {
+    .can-row dt {
       margin: 0;
       font-weight: 650;
-      font-size: 8.3pt;
+      font-size: 8.05pt;
       color: var(--accent);
     }
-    .skill-row dd {
-      margin: 0;
-      color: var(--ink);
-    }
-    .job { margin: 6px 0 0; }
+    .can-row dd { margin: 0; }
+    .job { margin: 4px 0 0; }
     .job-head {
       display: flex;
       justify-content: space-between;
       gap: 12px;
       align-items: baseline;
     }
-    .job-title { font-weight: 650; font-size: 10pt; }
+    .job-title { font-weight: 650; font-size: 9.8pt; }
     .job-title span { font-weight: 500; color: var(--muted); }
     .when {
       white-space: nowrap;
-      font-size: 8.2pt;
+      font-size: 8pt;
       color: var(--muted);
       font-variant-numeric: tabular-nums;
       font-weight: 500;
     }
-    .stack {
-      margin: 1px 0 3px;
+    .ctx {
+      margin: 1px 0 2px;
       color: var(--muted);
-      font-size: 8pt;
+      font-size: 7.95pt;
     }
-    ul {
-      margin: 0;
-      padding-left: 14px;
-    }
-    li { margin: 0 0 1.4px; padding-left: 1px; }
+    ul { margin: 0; padding-left: 13px; }
+    li { margin: 0 0 1px; }
     li::marker { color: var(--accent); }
-    .intern { margin-top: 6px; }
-    .intern .job-title { font-size: 9.6pt; margin-bottom: 2px; }
-    .intern p { margin: 2px 0; }
+    .intern { margin-top: 4px; }
+    .intern .job-title { font-size: 9.4pt; margin-bottom: 1px; }
+    .intern p { margin: 1.5px 0; }
     .edu {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -195,7 +153,7 @@
     <div class="mast">
       <div>
         <h1>Данила Сурков</h1>
-        <p class="role">Системный аналитик Middle+ · интеграции и API</p>
+        <p class="role">Системный аналитик Middle+ · интеграции, API, требования</p>
       </div>
       <div class="contacts">
         <a href="mailto:danila-surkov@mail.ru">danila-surkov@mail.ru</a><br />
@@ -207,45 +165,34 @@
     <p class="meta">Москва · Remote / гибрид · английский C1/C2 · русский — родной</p>
   </header>
 
-  <section class="results">
-    <div class="result">
-      <b>−50% трудозатрат на процесс</b>
-      <span>Интеграция от требований до запуска по всей торговой сети</span>
-    </div>
-    <div class="result">
-      <b>Быстрее вывод в production</b>
-      <span>Стандартизация REST/OpenAPI и согласование контрактов</span>
-    </div>
-    <div class="result">
-      <b>Меньше инцидентов</b>
-      <span>Точные требования и сценарии взаимодействия после релиза</span>
-    </div>
-  </section>
-
   <h2>Профиль</h2>
-  <p class="profile">Системный аналитик в интеграционных и enterprise-контурах: формализую сложные требования, проектирую REST/OpenAPI и асинхронный обмен на Kafka/RabbitMQ, веду участок до production. Работаю на стыке бизнеса и разработки, участвую в архитектуре, разбираю инциденты по логам и SQL. Сильная сторона — интеграции с WMS и государственными ИС.</p>
+  <p>Системный аналитик в платформенных интеграциях: собираю и уточняю требования бизнеса, пишу БТ/ФТ/ТЗ и постановки разработке, описываю REST в OpenAPI и асинхронный обмен Kafka/RabbitMQ, веду участок до production. Сопровождаю разработку и тестирование: критерии приёмки, дефекты, разбор инцидентов по логам и SQL. Предметка — внешние системы (WMS, государственные ИС, платёжные контуры). ИИ использую каждый день в работе и своих проектах.</p>
 
-  <h2>Навыки</h2>
-  <dl class="skills">
-    <div class="skill-row">
-      <dt>API и интеграции</dt>
-      <dd>REST, OpenAPI / Swagger, Kafka, RabbitMQ, event-driven, JSON, микросервисы</dd>
+  <h2>Что умею делать</h2>
+  <dl>
+    <div class="can-row">
+      <dt>Требования и ТЗ</dt>
+      <dd>Интервью и разбор текущих систем → БТ и ФТ, ТЗ, user story / use case, критерии приёмки, ограничения и ошибки. Документация в Confluence, постановки backend/frontend, grooming и planning.</dd>
     </div>
-    <div class="skill-row">
-      <dt>Данные и SQL</dt>
-      <dd>SQL, PostgreSQL, аналитические отчёты, разбор логов</dd>
+    <div class="can-row">
+      <dt>REST и OpenAPI</dt>
+      <dd>Сам описываю контракт сервиса: ресурсы, HTTP-методы, тела запроса/ответа, коды ошибок, примеры. Согласовываю контракт между командами до разработки, веду его в Swagger / OpenAPI.</dd>
     </div>
-    <div class="skill-row">
-      <dt>Анализ и модели</dt>
-      <dd>UML, BPMN, use cases, сценарии взаимодействия, постановка задач</dd>
+    <div class="can-row">
+      <dt>Kafka и RabbitMQ</dt>
+      <dd>Прорабатываю асинхронный обмен: кто публикует и читает, какие события и статусы, повторная обработка, расхождения. Рисую sequence по синхронным и асинхронным сценариям.</dd>
     </div>
-    <div class="skill-row">
-      <dt>Процесс и код</dt>
-      <dd>Agile / Kanban, Confluence, Git, CI/CD, Python, C++</dd>
+    <div class="can-row">
+      <dt>Модели и SQL</dt>
+      <dd>UML: use case, sequence, activity. BPMN as-is / to-be. Для интеграций описываю сущности, поля и связи. SQL к PostgreSQL: JOIN, фильтры, агрегации — отчёты и сверка данных на инцидентах.</dd>
     </div>
-    <div class="skill-row">
-      <dt>Предметные области</dt>
-      <dd>WMS, государственные ИС, торговые сети, платёжные решения, информационная безопасность</dd>
+    <div class="can-row">
+      <dt>Тесты и пром</dt>
+      <dd>Закладываю приёмку в постановку, уточняю ТЗ по ходу разработки, разбираю дефекты и production-инциденты по логам и SQL, актуализирую документацию после релиза.</dd>
+    </div>
+    <div class="can-row">
+      <dt>ИИ в работе</dt>
+      <dd>Ежедневно Cursor, Claude, Gemini, ChatGPT, Codex (Astra): черновики ТЗ и OpenAPI, SQL, логи, документация. Свои проекты и автоматизации на ИИ — в работе и вне её.</dd>
     </div>
   </dl>
 
@@ -256,15 +203,14 @@
       <div class="job-title">Ви6 Сервисес <span>· System Analyst (Middle+)</span></div>
       <div class="when">09.2024 — н.в.</div>
     </div>
-    <p class="stack">Интеграции enterprise / торговая сеть · REST, OpenAPI, Kafka, RabbitMQ, SQL, PostgreSQL, Confluence</p>
+    <p class="ctx">Контур торговой сети: платформенные интеграции внутренних сервисов с WMS и государственными ИС, обмен статусами и сверка данных. Стек: REST, OpenAPI/Swagger, Kafka, RabbitMQ, PostgreSQL, UML, BPMN, Confluence, Agile.</p>
     <ul>
-      <li>Провёл интеграцию полного цикла (требования → запуск): трудозатраты на процесс сократились <b>в 2 раза по всей торговой сети</b>.</li>
-      <li>Спроектировал REST API и контракты сервисов в OpenAPI/Swagger; стандартизация ускорила вывод изменений в production.</li>
-      <li>Проработал event-driven интеграции на Kafka и RabbitMQ: асинхронные сценарии, границы сервисов, сопровождение контрактов.</li>
-      <li>Снизил число инцидентов и пост-релизных доработок за счёт точных требований и сценариев взаимодействия.</li>
-      <li>Интеграции с WMS и государственными ИС: обмен, статусы, расхождения, сопровождение в эксплуатации.</li>
-      <li>Декомпозировал требования, ставил задачи backend/frontend, вёл grooming/planning, участвовал в архитектурных решениях.</li>
-      <li>SQL-отчёты, разбор логов и production-инцидентов, документация в Confluence, коммуникация с заказчиком.</li>
+      <li>Собрал и формализовал требования внутренних и внешних заказчиков, написал ТЗ и постановки разработке с критериями приёмки.</li>
+      <li>Описал REST API в OpenAPI/Swagger: методы, модели, ошибки, примеры. Согласование контрактов ускорило вывод изменений в production.</li>
+      <li>Спроектировал сценарии Kafka и RabbitMQ: события, статусы, повтор, разбор расхождений; sequence по взаимодействию сервисов.</li>
+      <li>Интеграции с WMS и государственными ИС: контракт обмена, статусы, расхождения, сопровождение в эксплуатации.</li>
+      <li>SQL к PostgreSQL для отчётов и сверки; разбор логов и дефектов на проме; grooming/planning, постановки backend/frontend, сопровождение до запуска.</li>
+      <li>Результат: интеграция полного цикла (требования → запуск) — трудозатраты процесса <b>в 2 раза ниже по всей торговой сети</b>; меньше пост-релизных доработок.</li>
     </ul>
   </article>
 
@@ -273,18 +219,18 @@
       <div class="job-title">Best2Pay (Бест2пей) <span>· System / Business Analyst</span></div>
       <div class="when">04.2024 — 11.2024</div>
     </div>
-    <p class="stack">Платёжные / клиентские решения на legacy · intern 04–07.2024, с 07.2024 — System / Business Analyst</p>
+    <p class="ctx">Платёжные / клиентские решения на legacy. Intern 04–07.2024, с 07.2024 — System / Business Analyst.</p>
     <ul>
-      <li>Вырос с intern до аналитика за 3 месяца: от поддержки команды до самостоятельной работы с клиентскими контурами.</li>
-      <li>Разобрал логику и пользовательские сценарии устаревшего ПО, актуализировал решения и предложил развитие функциональности.</li>
-      <li>Собрал требования, согласовал ТЗ для дизайнеров и разработчиков, контролировал прохождение процессов, вёл Wiki.</li>
+      <li>Вырос с intern до аналитика за 3 месяца: самостоятельно вёл клиентские контуры.</li>
+      <li>Разобрал логику и пользовательские сценарии устаревшего ПО, собрал БТ, написал и согласовал ТЗ для дизайнеров и разработчиков.</li>
+      <li>Контролировал прохождение процессов при развитии функциональности, вёл Wiki по решениям и постановкам.</li>
     </ul>
   </article>
 
   <article class="job intern">
     <div class="job-title">Стажировки</div>
-    <p><b>ИАТЭ НИЯУ МИФИ</b> · аналитик-практикант · 01.2024 — 04.2024. Анализ процессов и данных, системное моделирование, схемы и аналитические материалы.</p>
-    <p><b>Инфотекс (InfoTeCS)</b> · аналитик ИБ · 05.2022 — 08.2022. Процессы в контуре информационной безопасности, поиск потенциальных уязвимостей, описание новых процессов.</p>
+    <p><b>ИАТЭ НИЯУ МИФИ</b> · аналитик-практикант · 01.2024 — 04.2024. BPMN, анализ процессов и данных.</p>
+    <p><b>Инфотекс</b> · аналитик ИБ · 05.2022 — 08.2022. Процессы ИБ, описание новых процессов, разбор потенциальных уязвимостей.</p>
   </article>
 
   <h2>Образование</h2>

@@ -8,7 +8,6 @@
       font-family: "Noto Serif Display";
       src: url("file:///usr/share/fonts/truetype/noto/NotoSerifDisplay-Bold.ttf") format("truetype");
       font-weight: 700;
-      font-style: normal;
     }
     @font-face {
       font-family: Inter;
@@ -44,12 +43,12 @@
       background: #fff;
       color: var(--ink);
       font-family: Inter, "Noto Sans", "Liberation Sans", Arial, sans-serif;
-      font-size: 9.3pt;
-      line-height: 1.3;
+      font-size: 9.15pt;
+      line-height: 1.29;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
-    @page { size: A4; margin: 10.5mm 12.5mm 10mm 12.5mm; }
+    @page { size: A4; margin: 10mm 12mm 9.5mm 12mm; }
     .mast {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -58,64 +57,40 @@
     }
     h1 {
       margin: 0;
-      font-family: "Noto Serif Display", "Noto Serif", "Liberation Serif", Georgia, serif;
-      font-size: 25pt;
+      font-family: "Noto Serif Display", "Noto Serif", Georgia, serif;
+      font-size: 24pt;
       line-height: 0.95;
       font-weight: 700;
       letter-spacing: -0.025em;
     }
     .role {
-      margin: 6px 0 0;
-      font-size: 10.2pt;
+      margin: 5px 0 0;
+      font-size: 10pt;
       font-weight: 500;
     }
     .contacts {
       text-align: right;
-      font-size: 8.3pt;
-      line-height: 1.48;
+      font-size: 8.15pt;
+      line-height: 1.45;
     }
     .contacts a { color: inherit; text-decoration: none; }
     .rules {
-      margin: 7px 0 7px;
+      margin: 6px 0 6px;
       border-top: 2.05px solid var(--rule);
       border-bottom: 0.45px solid var(--rule);
       height: 4px;
     }
     .meta {
-      margin: 0 0 8px;
-      font-size: 8.15pt;
+      margin: 0 0 7px;
+      font-size: 7.9pt;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
       font-weight: 500;
     }
-    .results {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      border-top: 0.45px solid var(--hair);
-      border-bottom: 0.45px solid var(--hair);
-    }
-    .result { padding: 6px 12px 6px 0; }
-    .result + .result {
-      padding-left: 12px;
-      border-left: 0.45px solid var(--hair);
-    }
-    .result b {
-      display: block;
-      font-size: 9pt;
-      font-weight: 650;
-      color: var(--accent);
-    }
-    .result span {
-      display: block;
-      margin-top: 2px;
-      font-size: 7.85pt;
-      line-height: 1.28;
-      color: var(--muted);
-    }
     h2 {
-      margin: 8px 0 3px;
-      font-size: 7.55pt;
+      margin: 7px 0 3px;
+      font-size: 7.4pt;
       font-weight: 650;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -123,43 +98,46 @@
       padding-bottom: 2px;
     }
     p { margin: 0; }
-    .profile { text-align: justify; hyphens: auto; }
-    .skill-row {
+    .can-row {
       display: grid;
-      grid-template-columns: 128px 1fr;
-      gap: 8px;
-      margin: 2.5px 0;
+      grid-template-columns: 122px 1fr;
+      gap: 7px;
+      margin: 2.2px 0;
     }
-    .skill-row dt {
+    .can-row dt {
       margin: 0;
       font-weight: 650;
-      font-size: 8.3pt;
+      font-size: 8.05pt;
       color: var(--accent);
     }
-    .skill-row dd { margin: 0; }
-    .job { margin: 6px 0 0; }
+    .can-row dd { margin: 0; }
+    .job { margin: 5px 0 0; }
     .job-head {
       display: flex;
       justify-content: space-between;
       gap: 12px;
       align-items: baseline;
     }
-    .job-title { font-weight: 650; font-size: 10pt; }
+    .job-title { font-weight: 650; font-size: 9.8pt; }
     .job-title span { font-weight: 500; color: var(--muted); }
     .when {
       white-space: nowrap;
-      font-size: 8.2pt;
+      font-size: 8pt;
       color: var(--muted);
       font-variant-numeric: tabular-nums;
       font-weight: 500;
     }
-    .stack { margin: 1px 0 3px; color: var(--muted); font-size: 8pt; }
-    ul { margin: 0; padding-left: 14px; }
-    li { margin: 0 0 1.4px; }
+    .ctx {
+      margin: 1px 0 2px;
+      color: var(--muted);
+      font-size: 7.95pt;
+    }
+    ul { margin: 0; padding-left: 13px; }
+    li { margin: 0 0 1.2px; }
     li::marker { color: var(--accent); }
-    .intern { margin-top: 6px; }
-    .intern .job-title { font-size: 9.6pt; margin-bottom: 2px; }
-    .intern p { margin: 2px 0; }
+    .intern { margin-top: 5px; }
+    .intern .job-title { font-size: 9.4pt; margin-bottom: 1px; }
+    .intern p { margin: 1.5px 0; }
     .edu {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -169,13 +147,14 @@
       break-inside: avoid;
     }
   </style>
+
 </head>
 <body>
   <header>
     <div class="mast">
       <div>
         <h1>Danila Surkov</h1>
-        <p class="role">System Analyst Middle+ · integrations &amp; APIs</p>
+        <p class="role">System Analyst Middle+ · integrations, APIs, requirements</p>
       </div>
       <div class="contacts">
         <a href="mailto:danila-surkov@mail.ru">danila-surkov@mail.ru</a><br />
@@ -187,45 +166,34 @@
     <p class="meta">Moscow · Remote / hybrid · English C1/C2 · Russian native</p>
   </header>
 
-  <section class="results">
-    <div class="result">
-      <b>−50% labour on a process</b>
-      <span>End-to-end integration across the retail network</span>
-    </div>
-    <div class="result">
-      <b>Faster path to production</b>
-      <span>Standardized REST/OpenAPI contracts and alignment</span>
-    </div>
-    <div class="result">
-      <b>Fewer incidents</b>
-      <span>Precise requirements and service interaction after release</span>
-    </div>
-  </section>
-
   <h2>Profile</h2>
-  <p class="profile">System analyst in integration and enterprise programs: I turn complex requirements into REST/OpenAPI contracts and Kafka/RabbitMQ async flows, then own the slice through production. I work at the business–engineering boundary, join architecture decisions, and debug incidents with logs and SQL. Strongest in integrations with WMS and government information systems.</p>
+  <p>System analyst on platform integrations: I elicit and refine business requirements, write BR/FR/specs and dev tasks, describe REST in OpenAPI and async flows on Kafka/RabbitMQ, and own the slice through production. I stay with development and testing: acceptance criteria, defects, incidents via logs and SQL. Domain: external systems (WMS, government IS, payment contours). I use AI every day at work and in my own projects.</p>
 
-  <h2>Skills</h2>
+  <h2>What I actually do</h2>
   <dl>
-    <div class="skill-row">
-      <dt>APIs &amp; integrations</dt>
-      <dd>REST, OpenAPI / Swagger, Kafka, RabbitMQ, event-driven, JSON, microservices</dd>
+    <div class="can-row">
+      <dt>Requirements &amp; specs</dt>
+      <dd>Interviews and as-is analysis → business/functional requirements, specs, user stories / use cases, acceptance criteria, constraints and errors. Confluence docs, backend/frontend tasking, grooming and planning.</dd>
     </div>
-    <div class="skill-row">
-      <dt>Data &amp; SQL</dt>
-      <dd>SQL, PostgreSQL, operational reports, log analysis</dd>
+    <div class="can-row">
+      <dt>REST &amp; OpenAPI</dt>
+      <dd>I write the service contract myself: resources, HTTP methods, request/response bodies, error codes, examples. Align the contract across teams before coding; keep it in Swagger / OpenAPI.</dd>
     </div>
-    <div class="skill-row">
-      <dt>Analysis</dt>
-      <dd>UML, BPMN, use cases, interaction scenarios, developer tasking</dd>
+    <div class="can-row">
+      <dt>Kafka &amp; RabbitMQ</dt>
+      <dd>I design async exchange: publishers and consumers, events and statuses, retries, discrepancy handling. Sequence diagrams for sync and async scenarios.</dd>
     </div>
-    <div class="skill-row">
-      <dt>Delivery</dt>
-      <dd>Agile / Kanban, Confluence, Git, CI/CD, Python, C++</dd>
+    <div class="can-row">
+      <dt>Models &amp; SQL</dt>
+      <dd>UML: use case, sequence, activity. BPMN as-is / to-be. For integrations I describe entities, fields and relations. PostgreSQL SQL: JOINs, filters, aggregations — reports and incident data checks.</dd>
     </div>
-    <div class="skill-row">
-      <dt>Domains</dt>
-      <dd>WMS, government IS, retail networks, payments, information security</dd>
+    <div class="can-row">
+      <dt>Test &amp; prod</dt>
+      <dd>Acceptance criteria in the spec, spec updates during development, defect and production-incident analysis from logs and SQL, docs updated after release.</dd>
+    </div>
+    <div class="can-row">
+      <dt>AI at work</dt>
+      <dd>Daily: Cursor, Claude, Gemini, ChatGPT, Codex (Astra). Drafts of specs and OpenAPI, SQL, log analysis, documentation, prototypes. I also build my own AI projects and automations.</dd>
     </div>
   </dl>
 
@@ -236,15 +204,15 @@
       <div class="job-title">V6 Services (Ви6 Сервисес) <span>· System Analyst (Middle+)</span></div>
       <div class="when">Sep 2024 — present</div>
     </div>
-    <p class="stack">Enterprise integrations / retail · REST, OpenAPI, Kafka, RabbitMQ, SQL, PostgreSQL, Confluence</p>
+    <p class="ctx">Retail-network contour: platform integrations of internal services with WMS and government IS, status exchange and data reconciliation. Stack: REST, OpenAPI/Swagger, Kafka, RabbitMQ, PostgreSQL, UML, BPMN, Confluence, Agile.</p>
     <ul>
-      <li>Delivered a full-cycle integration (requirements → launch) that <b>cut process labour in half across the retail network</b>.</li>
-      <li>Designed REST APIs and service contracts in OpenAPI/Swagger; API standards sped up production releases.</li>
-      <li>Designed Kafka and RabbitMQ event-driven integrations: async flows, service boundaries, contract ownership.</li>
-      <li>Reduced incidents and post-release rework through precise requirements and interaction scenarios.</li>
-      <li>Integrated with WMS and government IS: exchanges, statuses, discrepancies, operational support.</li>
-      <li>Broke down requirements, tasked backend/frontend, ran grooming/planning, joined architecture decisions.</li>
-      <li>SQL reports, log/production incident analysis, Confluence docs, stakeholder communication.</li>
+      <li>Elicited requirements from internal and external stakeholders; wrote specs and dev tasks with acceptance criteria.</li>
+      <li>Described REST APIs in OpenAPI/Swagger: methods, models, errors, examples. Contract alignment sped up production releases.</li>
+      <li>Designed Kafka and RabbitMQ scenarios: events, statuses, retries, discrepancy handling; sequence diagrams for service interaction.</li>
+      <li>WMS and government-IS integrations: exchange contract, statuses, discrepancies, operational support.</li>
+      <li>PostgreSQL SQL for operational reports and reconciliation; log/defect analysis in prod; Confluence documentation.</li>
+      <li>Broke down backend/frontend work, ran grooming/planning, joined architecture decisions, stayed through launch.</li>
+      <li>Outcome: full-cycle integration (requirements → launch) — process labour <b>cut in half across the retail network</b>; less post-release rework.</li>
     </ul>
   </article>
 
@@ -253,18 +221,18 @@
       <div class="job-title">Best2Pay <span>· System / Business Analyst</span></div>
       <div class="when">Apr 2024 — Nov 2024</div>
     </div>
-    <p class="stack">Payment / client solutions on legacy · intern Apr–Jul 2024, System / Business Analyst from Jul 2024</p>
+    <p class="ctx">Payment / client solutions on legacy. Intern Apr–Jul 2024, System / Business Analyst from Jul 2024.</p>
     <ul>
-      <li>Promoted intern → analyst in 3 months: from supporting the team to owning client-solution work.</li>
-      <li>Reverse-engineered legacy behaviour and user journeys; proposed functional improvements.</li>
-      <li>Elicited requirements, aligned specs for design and engineering, tracked process delivery, built an internal wiki.</li>
+      <li>Promoted intern → analyst in 3 months; owned client-solution work independently.</li>
+      <li>Reverse-engineered legacy behaviour and user journeys; wrote and aligned specs for design and engineering.</li>
+      <li>Tracked process delivery for new functionality; kept a wiki of decisions and specs.</li>
     </ul>
   </article>
 
   <article class="job intern">
     <div class="job-title">Internships</div>
-    <p><b>IATE MEPhI</b> · analyst intern · Jan 2024 — Apr 2024. Process and data analysis, system modelling, diagrams and analytical notes.</p>
-    <p><b>InfoTeCS</b> · information-security analyst intern · May 2022 — Aug 2022. Security-contour processes, potential vulnerability analysis, new process descriptions.</p>
+    <p><b>IATE MEPhI</b> · analyst intern · Jan 2024 — Apr 2024. BPMN / process models, data analysis, analytical notes.</p>
+    <p><b>InfoTeCS</b> · information-security analyst intern · May 2022 — Aug 2022. Security-contour processes, new process descriptions, potential vulnerability review.</p>
   </article>
 
   <h2>Education</h2>
