@@ -13,8 +13,10 @@
 from __future__ import annotations
 
 import json
+import os
 import random
 import re
+import sys
 import time
 import traceback
 import urllib.request
@@ -24,7 +26,8 @@ from pathlib import Path
 from openpyxl import Workbook
 from websocket import create_connection
 
-N = 30
+# Batch size: HH_FARM_N=3 python3 resume/hh_farm30.py   or   python3 resume/hh_farm30.py 3
+N = int(os.environ.get("HH_FARM_N") or (sys.argv[1] if len(sys.argv) > 1 else "5"))
 CDP_HTTP = "http://127.0.0.1:9222"
 OUT_XLSX = Path("/workspace/resume/hh-otkliki-30.xlsx")
 OUT_JSON = Path("/tmp/hh-farm30.json")
