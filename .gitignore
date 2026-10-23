@@ -1,0 +1,5 @@
+resume/preview-*.png
+resume/*-page*.png
+__pycache__/
+.venv/
+*.pyc
