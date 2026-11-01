@@ -168,11 +168,25 @@ class Browser:
         try:
             hit = self.js(
                 r"""(() => {
+                  // Visible UI only — full HTML has analytics/"captcha" strings → false positives.
                   const t = (document.body && document.body.innerText) || '';
                   const href = location.href || '';
-                  const html = (document.documentElement && document.documentElement.innerHTML) || '';
-                  return /SmartCaptcha|captcha\.yandex|checkbox-captcha|я не робот|докажите, что вы человек|Are you a human|hcaptcha|recaptcha/i.test(t+href+html)
-                    || !!document.querySelector('[class*="Captcha"], [class*="captcha"], iframe[src*="captcha"], [data-testid*="captcha"]');
+                  if (/\/captcha|account-captcha|smartcaptcha/i.test(href)) return true;
+                  if (/я не робот|докажите, что вы человек|Are you a human|введите текст с картинки|Enter the text from the image/i.test(t)) return true;
+                  const input = document.querySelector('[data-qa="account-captcha-input"], input[name="captchaText"]');
+                  if (input) {
+                    const r = input.getBoundingClientRect();
+                    if (r.width > 0 && r.height > 0) return true;
+                  }
+                  const iframe = [...document.querySelectorAll('iframe[src*="captcha"], iframe[src*="smartcaptcha"], iframe[src*="hcaptcha"], iframe[src*="recaptcha"]')]
+                    .find(el => { const r = el.getBoundingClientRect(); return r.width > 40 && r.height > 40; });
+                  if (iframe) return true;
+                  const modal = document.querySelector('[data-qa*="captcha"], [class*="CaptchaModal"], [class*="captcha-modal"]');
+                  if (modal) {
+                    const r = modal.getBoundingClientRect();
+                    if (r.width > 40 && r.height > 40) return true;
+                  }
+                  return false;
                 })()"""
             )
         except Exception:
