@@ -193,7 +193,7 @@ class Browser:
             raise CaptchaStop(where)
 
     def pause(self) -> None:
-        delay = random.uniform(5, 15)
+        delay = random.uniform(1, 4)
         log(f"pause {delay:.1f}s")
         time.sleep(delay)
 
@@ -980,7 +980,7 @@ def main() -> None:
             log("STOP: login")
             break
         else:
-            time.sleep(random.uniform(3, 7))
+            time.sleep(random.uniform(1, 3))
 
         if ok < N and i >= len(links) - 2:
             try:

@@ -35,7 +35,7 @@ description: >-
    Fill `[data-qa=account-captcha-input]` / `input[name=captchaText]`, **mouse-click** modal **Отправить** (not vacancy «Send application»).
 3. One Apply click per `vacancyId`; track `/tmp/hh-applied-ids.txt`.
 4. Always **hard reload** vacancy page before trusting Apply / Already applied UI.
-5. Pauses between user actions: random **5–15s**.
+5. Pauses between user actions: random **1–4s**.
 6. Prefer CDP DOM/JS over screenshots (except captcha / broken UI).
 7. Skip or don’t push roles with вилка clearly below **250k net**.
 8. HTML-first: `data-qa`, then text; Magritte radios → CDP mouse on `[data-qa=cell]`.
